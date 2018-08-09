@@ -1,0 +1,61 @@
+// COLOR //
+$accent-color: #3dc9b3;
+$header-color: #353535;
+$text-color: #8c9398;
+$dark-color: #242830;
+$footer-color: #a1a9b0;
+
+// FONTS //
+@font-face {
+  font-family: 'Gotham Rounded Book';
+  src: url("../public/fonts/Gotham Rounded Book.otf");
+}
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: url("../public/fonts/Gotham Rounded Medium.otf");
+}
+@font-face {
+  font-family: 'Gotham Rounded light';
+  src: url("../public/fonts/Gotham Rounded Light.otf");
+}
+@font-face {
+  font-family: 'Gotham Rounded bold';
+  src: url("../public/fonts/GothamRoundedBold.otf");
+}
+@font-face {
+  font-family: 'Gotham Rounded italic';
+  src: url("../public/fonts/Gotham Rounded Medium Italic.otf");
+}
+
+// MIXINS //
+@mixin to-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// ANIMATIONS //
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

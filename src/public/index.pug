@@ -1,9 +1,120 @@
+include ./mixins.pug
+
 doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    title Document
-  body
-    h1 Hello
+    title Halcyon
+  body.page
+    .baner
+      .container
+        p.text This is test template from random weekly mailing
+    header.header
+      .container.header__container.fadeInUp
+        .header__composition
+          h1.h1.header__h1 <span class='span header__span'>HALCYON</span>DAYS
+          small.small.header__small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+          button.btn.header__btn LEARN MORE
+    main.main
+      section.main__section.section__description
+        .container.description__container
+          +h2('A CREATIVE PORTFOLIO TEMPLATE')(class='description__h2')
+          p.text.description__text Sed a lorem quis neque interdum <span class='span'>consequat ut sed sem.</span> Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent id tempor ipsum. Fusce at massa ac nunc porta fringilla sed eget neque. Quisque quis pretium nulla. Fusce eget bibendum neque, vel volutpat augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+      section.main__section.section__servise
+        .container
+          +h2('LOVE WHAT YOU DO, AND YOU’LL DO IT WELL')
+          .servise__wrapper
+            - var list = ['DIGITAL DESIGN', 'WEB DEVELOPMENT', 'WE LOVE YOU']
+            - var counter = 1
+            each item in list
+              .servise__block.card
+                div(class=`servise__icon card__img servise__icon--${counter}`)
+                - counter++
+                // ADD COUNTER
+                .servise__title.card__title= item
+                .servise__description.card__discription.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+      section.main__section.section__skills
+        .container.skills__container
+          .skills__part.skills__part--1
+          .skills__part.skills__part--2
+            .skills__slider
+              .siema
+                - for (var x = 0; x < 3; x++)
+                  .skills__slide
+                    .skills__composition
+                      +h2('RESPONSIVE DESIGN SPECIALIST')
+                      p.text.skills__text 
+                        span.skills__span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+                        span.skills__span Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan.
+                        span.skills__span Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.
+      section.main__section.section__quote
+        .quote__wrapper.container
+          blockquote.quote__blockquote <span class='quote__span'>I GOT 99 PROBLEMS</span> BUT <span class='quote__span--small'>DESIGN</span> ‘AINT ONE
+          button.anchor.quote__anchor.anchor--down
+      section.main__section.section__advantages
+        .container.adbantages__container
+          .siema.advantages__slider
+            //- - for(var x = 0; x < 3; x++) 
+            - var list = ['CREATIVE MINDS', 'THINK ALIKE', 'PIXEL PERFECTION']
+            each item in list
+              .advantages__slide
+                    .card.advantages__card
+                      .card__img.advantages__img
+                      .card__title.advantages__title= item
+                      .card__text.advantages__text.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+      section.main__section.section__button
+        .container
+          button.btn.button__itself lorem inpum dolor
+      section.main__section.section__team
+        .container.team__container
+          +h2('WE’RE A TEAM THAT ADORE WHAT WE DO')
+          .siema.team__slider 
+            //- - for(var x = 0; x < 3; x++) 
+            - var list = ['JON SNOW', 'CERSEI LANNISTER', 'JAMIE LANNISTER']
+            - var counter = 1
+            each item in list
+              .team__slide
+                    .card.team__card
+                      div(class=`card__img team__img team__img--${counter}`)
+                      .card__title.team__title= item
+                      .card__text.team__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+                      +media(class='team__media')
+              - counter++
+      section.main__section.section__form 
+        .container
+          form(action='' method='').form__itself
+            .label__wrapper
+              label(for='subscribe').form__label SUBSCRIBE TO STAY IN THE LOOP
+            .form__wrapper
+              input(type='email' name='subscribe' id='subscribe' required).form__input
+              input(type='submit' value='send').form__btn.btn
+          .form__anchor-wrapper
+            button.anchor.form__anchor.anchor--up
+      section.main__section.section__contacts
+        .container 
+          +h2('DROP US A LINE')
+          .contacts__assets
+            .contacts__card
+              h5.assets__title ADDRESS
+              p.assets__text.text Level 6, 23 Pitt St, Sydney
+            .contacts__card
+              h5.assets__title PHONE
+              p.assets__text.text +61 9 211 3741
+            .contacts__card
+              h5.assets__title EMAIL
+              p.assets__text.text hey@halcyon.com.au
+          +media.contacts__media
+    footer.footer
+      .container 
+        p.footer__text.text Terms & Conditions  |  Legals
+              
+
+                
+            
+      
+          
+          
+            
