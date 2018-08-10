@@ -11,8 +11,11 @@ html {
 }
 
 .baner {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   background-color: $dark-color;
 }
 
@@ -239,6 +242,7 @@ html {
           &--1 {
             background-image: url('../public/img/phone.png');
             background-repeat: no-repeat;
+            // background-attachment: fixed;
             background-position: 5%;
 
             @media (max-width: 1024px) {

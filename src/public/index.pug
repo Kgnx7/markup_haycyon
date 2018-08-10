@@ -12,7 +12,7 @@ html(lang='en')
     .baner
       .container
         p.text This is test template from random weekly mailing
-    header.header
+    header.header.parallax
       .container.header__container.fadeInUp
         .header__composition
           h1.h1.header__h1 <span class='span header__span'>HALCYON</span>DAYS
@@ -80,7 +80,7 @@ html(lang='en')
                     .card.team__card
                       div(class=`card__img team__img team__img--${counter}`)
                       .card__title.team__title= item
-                      .card__text.team__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+                      .card__text.team__text.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
                       +media(class='team__media')
               - counter++
       section.main__section.section__form 

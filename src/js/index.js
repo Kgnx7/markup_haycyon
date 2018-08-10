@@ -72,18 +72,25 @@ function main() {
   });
   // END ANCHOR //
 
-  // SCROLL //
+  // SCROLL AND PARALLAX //
   const h2 = document.querySelectorAll('.h2');
+  const parallax = document.querySelector('.header');
+  const valueOfParallax = .7;
+
   window.addEventListener('scroll', function() {
     h2.forEach(el => {
       if (isInViewport(el)) el.classList.add('fadeIn');
     });
+
+    const  offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = `${offset * valueOfParallax}px`;
+
   });
 
   function isInViewport(el) {
     const bounding = el.getBoundingClientRect();
     return (
-       bounding.top >= 0 &&
+       // bounding.top >= 0 &&
        bounding.left >= 0 &&
        bounding.bottom <= document.documentElement.clientHeight
    );
